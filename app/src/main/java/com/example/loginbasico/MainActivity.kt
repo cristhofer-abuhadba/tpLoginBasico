@@ -1,11 +1,11 @@
 package com.example.loginbasico
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +26,16 @@ class MainActivity : ComponentActivity() {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
-
             val usuarioVerificado = usuarios[email] == password
 
             if (usuarioVerificado) {
-                Toast.makeText(this, "Login exitoso ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Home::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Incorrecto o la cuenta no existe", Toast.LENGTH_SHORT).show()
             }
-        }}}
+        }
+    }
+}
