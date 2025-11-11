@@ -5,4 +5,13 @@
 
     </style>
 
+    <style name="Theme.LoginBasico.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.LoginBasico.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.LoginBasico.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
